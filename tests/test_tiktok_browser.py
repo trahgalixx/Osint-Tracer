@@ -80,7 +80,7 @@ def search():
         <script>fetch('/api/search/general/full/?cursor=0&login=1')</script></body></html>"""
     if q == "domonly":                          # hasil hanya ada di tampilan halaman
         cards = "".join(f'<div data-e2e="search_top-item"><a href="/@pembuat{i}/video/{7311234567890123456 + i}">x</a>'
-                        f'<div data-e2e="search-card-video-caption">dasco cawapres #pilpres video {i}</div>'
+                        f'<div data-e2e="search-card-video-caption">air pdam bau #airkotatercemar video {i}</div>'
                         f'<strong data-e2e="video-views">{i + 1},5 rb</strong></div>' for i in range(4))
         return f"<html><body>{cards}</body></html>"
     return list_page("/api/search/general/full/")
@@ -184,7 +184,7 @@ def main():
 
     # 1. daftar target campuran dalam satu input
     targets = """#airkotatercemar | 9
-dasco calon wakil presiden
+air pdam tercemar
 @pemkot_ls | 4
 https://www.tiktok.com/@sumber/video/7399 | 40"""
     posts = TB.collect_tiktok(targets=targets, proxy_url="socks5://u:p%40ss@10.0.0.1:1080", comments_for_top=1,
@@ -195,7 +195,7 @@ https://www.tiktok.com/@sumber/video/7399 | 40"""
     assert seen["proxy"] == {"server": "socks5://10.0.0.1:1080", "username": "u", "password": "p@ss"}, seen
     assert any("4 target:" in l for l in logs), logs
     assert len([v for v in vids if "airkotatercemar" in v.text]) >= 9, "hashtag: item terakhir digulir → 3 halaman"
-    assert VISITED[0] == "/search?q=dasco%20calon%20wakil%20presiden", VISITED
+    assert VISITED[0] == "/search?q=air%20pdam%20tercemar", VISITED
     assert sum("pdamlembahsari" in v.text for v in vids) >= 6, "pencarian: batas bawaan 6"
     assert sum(v.author == "pemkot_ls" for v in vids) >= 4, "profil akun"
     assert "tiktok:7399" in by and by["tiktok:7399"].author == "sumber", "video dari data rehidrasi"
@@ -221,7 +221,7 @@ https://www.tiktok.com/@sumber/video/7399 | 40"""
     logs.clear()
     out = TB.collect_tiktok(targets="domonly | 4", comments_for_top=0, **fast)
     assert len(out) == 4 and all(p.author.startswith("pembuat") for p in out), out
-    assert out[0].created_at.year == 2023 and "#pilpres" in out[0].text and out[1].extra["plays"] == 2500, out[1]
+    assert out[0].created_at.year == 2023 and "#airkotatercemar" in out[0].text and out[1].extra["plays"] == 2500, out[1]
 
     # 5. dialihkan ke beranda / jendela login → diagnosis + screenshot
     logs.clear()

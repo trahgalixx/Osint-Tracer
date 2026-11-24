@@ -96,7 +96,7 @@ python -m camoufox fetch     # mengunduh browser Camoufox (±100–200 MB)
    ```
    #airkotatercemar | 200                                   ← video dari hashtag (maks 200)
    @lembahsari.viral                                        ← video dari profil akun
-   dasco calon wakil presiden                               ← pencarian TikTok
+   air pdam tercemar                                        ← pencarian TikTok
    https://www.tiktok.com/@akun/video/7311234567890123456 | 500   ← komentar video itu (maks 500)
    ```
    URL hashtag (`/tag/…`), pencarian (`/search?q=…`), dan profil (`/@akun`) juga dikenali. `| angka` = batas per

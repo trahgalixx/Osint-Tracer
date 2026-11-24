@@ -173,7 +173,7 @@ function tabData(el) {
       <label class="f"><span>Daftar target (satu per baris)</span>
         <textarea id="q_tt_b_targets" rows="6" placeholder="#airkotatercemar | 200
 @lembahsari.viral
-dasco calon wakil presiden
+air pdam tercemar
 https://www.tiktok.com/@akun/video/7311234567890123456 | 500">${esc(q.tt_b_targets || [..._lst(q.tt_b_tags).map(t => "#" + t.replace(/^#/, "")), ..._lst(q.tt_b_keywords), ..._lst(q.tt_b_urls)].join("\n"))}</textarea>
         <span><code>#hashtag</code> · <code>@akun</code> · kata kunci (pencarian) · URL video / hashtag / pencarian / profil TikTok. Tambahkan <code>| angka</code> untuk batas per target: jumlah video, atau jumlah komentar untuk URL video.</span></label>
       <div class="form-grid" style="margin-top:10px">
